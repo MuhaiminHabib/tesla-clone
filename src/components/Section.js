@@ -8,15 +8,19 @@ const Section = () => {
                 <p>Order online for touchless delivery</p>
             </ItemText>
 
-            <ButtonGroup>
-                <LeftButton>
-                    Custom Order
-                </LeftButton>
+            <Buttons>
+                <ButtonGroup>
+                    <LeftButton>
+                        Custom Order
+                    </LeftButton>
 
-                <RightButton>
-                    Existing Inventory
-                </RightButton>
-            </ButtonGroup>
+                    <RightButton>
+                        Existing Inventory
+                    </RightButton>
+                </ButtonGroup>
+
+                <DownArrow src='/images/down-arrow.svg'/>
+            </Buttons>
         </Wrap>
     )
 }
@@ -43,6 +47,8 @@ const ItemText = styled.div`
     text-align: center;
 `
 
+const Buttons = styled.div``;
+
 const ButtonGroup = styled.div`
     display: flex;
     // flex-direction: column;
@@ -62,7 +68,13 @@ const LeftButton = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
+    margin: 8px;
 `
 
 const RightButton = styled(LeftButton)``
 
+const DownArrow = styled.img`
+    overflow-x: hidden;
+    height: 40px;
+    animation: animateDown infinite 1.5s;
+`
