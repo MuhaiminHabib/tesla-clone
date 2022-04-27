@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
-const Section = () => {
+const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg }) => {
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order online for touchless delivery</p>
+                <h1>{ title }</h1>
+                <p>{ description }</p>
             </ItemText>
 
             <Buttons>
                 <ButtonGroup>
                     <LeftButton>
-                        Custom Order
+                        { leftBtnText }
                     </LeftButton>
 
                     <RightButton>
-                        Existing Inventory
+                        { rightBtnText }
                     </RightButton>
                 </ButtonGroup>
 
@@ -34,11 +34,12 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/model-s.jpg');
+    // background-image: url('/images/model-s.jpg');
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: ${props => `url('/images/${props.bgImage}')`}
 
 `
 
