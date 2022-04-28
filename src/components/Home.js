@@ -33,6 +33,20 @@ const Home = () => {
                 leftBtnText="Custom Order"
                 rightBtnText="Existing Invertory"
             />
+            <Section 
+                title="Model X"
+                description="Order online for Touchless Delivery"
+                backgroundImg="model-x.jpg"
+                leftBtnText="Custom Order"
+                rightBtnText="Existing Invertory"
+            />
+            <Section 
+                title="Model X"
+                description="Order online for Touchless Delivery"
+                backgroundImg="model-x.jpg"
+                leftBtnText="Custom Order"
+                rightBtnText="Existing Invertory"
+            />
             
         </Container>
 
