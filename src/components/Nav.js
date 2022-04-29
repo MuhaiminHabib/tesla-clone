@@ -1,6 +1,9 @@
 const Nav = () => {
     return (
-        <h1>i am the nav component</h1>
+        <nav>
+            <h1>i am the nav component</h1>
+        </nav>
+        
     )
 }
 
