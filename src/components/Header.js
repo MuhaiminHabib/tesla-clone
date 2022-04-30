@@ -44,4 +44,6 @@ const Menu = styled.div`
     padding: 0 10px;
     flex-wrap: no-wrap;
   }
+
+  h1 {}
 `
