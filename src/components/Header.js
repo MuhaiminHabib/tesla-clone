@@ -46,4 +46,6 @@ const Menu = styled.div`
   }
 
   h1 {}
+
+  h3 {}
 `
