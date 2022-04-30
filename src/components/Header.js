@@ -1,7 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
+
 const Header = ({title}) => {
   return (
-    <div>{title}</div>
+    <Container>
+      <a href='askfjdh'>
+        <img src="/images/logo.svg" alt="tesla logo" />
+      </a>
+    </Container>
   )
 }
 
-export default Header
+export default Header;
+
+
+const  Container = styled.div`
+
+`
