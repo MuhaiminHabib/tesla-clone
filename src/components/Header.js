@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Header = ({title}) => {
+
+  const [burgerStatus, setBurgerStatus] = useState(false);
   return (
     <Container>
       <a href='#'>
@@ -18,11 +20,11 @@ const Header = ({title}) => {
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
-        <CustomMenu />
+        <CustomMenu onClick={() => {setBurgerStatus(true)}}/>
       </RightMenu>
-      <BurgerMenu>
+      <BurgerMenu show={burgerStatus}>
         <CloseWrapper>
-          <CustomClose />
+          <CustomClose onClick={() => {setBurgerStatus(false)}}/>
         </CloseWrapper>
         <li><a herf="#">Existing Inventory</a></li>
         <li><a herf="#">Used Inventory</a></li>
@@ -75,10 +77,11 @@ const Menu = styled.div`
 const RightMenu = styled.div`
   display: flex;
   align-items: center;
+
   a {
     font-weight: 600;
     text-transform: uppercase;
-    margin-right: 0 10px; 
+    margin-right: 15px; 
   }
 `
 
@@ -99,10 +102,12 @@ const BurgerMenu = styled.div`
   display: flex;
   flex-direction: column;
   text-align: start;
+  transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+  transition: transform 0.2s;
 
   li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     a {
       font-weight: 600;
